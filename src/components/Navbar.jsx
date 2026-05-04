@@ -19,7 +19,10 @@ export default function Navbar() {
           </Link>
           <div className="flex items-center gap-4">
             {user ? (
-              <>
+              <div className="flex items-center gap-4">
+                <Link to="/guests" className="text-sm text-gray-600 hover:text-gray-900">
+                  Invitati
+                </Link>
                 <span className="text-sm text-gray-600">{user.email}</span>
                 <button
                   onClick={handleLogout}
@@ -27,7 +30,7 @@ export default function Navbar() {
                 >
                   Logout
                 </button>
-              </>
+              </div>
             ) : (
               <div className="flex gap-2">
                 <Link to="/login" className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600">
