@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-gray-50 text-gray-900;
+@layer base {
+  :root {
+    --background: 36 33% 96%;
+    --foreground: 0 0% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 18%;
+    --primary: 128 8% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 40% 84%;
+    --secondary-foreground: 0 0% 18%;
+    --muted: 120 10% 92%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 33 39% 63%;
+    --accent-foreground: 0 0% 18%;
+    --destructive: 0 36% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 36 14% 81%;
+    --input: 36 14% 81%;
+    --ring: 128 8% 58%;
+    --radius: 0.625rem;
+    --sidebar-background: 128 8% 58%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 128 8% 58%;
+    --sidebar-accent: 120 10% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 120 10% 45%;
+    --sidebar-ring: 33 39% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
 }
